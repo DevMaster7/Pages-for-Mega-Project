@@ -9,7 +9,8 @@ let landBars = document.querySelectorAll(".bars-cross-land")[0]
 let landCross = document.querySelectorAll(".bars-cross-land")[1]
 let landDrop = document.querySelector(".useless-dropdown-land")
 let landDropCon = document.querySelector(".dropdown-con-land")
-let faq_btn = document.querySelectorAll(".faq-topic")
+let faq_btn = document.querySelectorAll(".faq-topic")        
+
 
 // Logo Animation
 icon.addEventListener("animationend", function () {
@@ -27,24 +28,10 @@ window.addEventListener("scroll", () => {
 });
 
 // Theme Changer
-let a = 0
-themeBtn.addEventListener("click", function () {
-    let themePic = themeBtn.children[0].children[0]
-    if (a == 0) {
-        themePic.classList.replace("fa-sun", "fa-moon");
-        themePic.style.color = "#023047"
-        themeBtn.children[0].style.left = "unset"
-        themeBtn.children[0].style.right = "1px"
-        a = 1
-    }
-    else {
-        themePic.classList.replace("fa-moon", "fa-sun");
-        themePic.style.color = "rgb(255 154 39)"
-        themeBtn.children[0].style.right = "unset"
-        themeBtn.children[0].style.left = "1px"
-        a = 0
-    }
-})
+function toggleTheme() {
+    const btn = document.querySelector(".theme__icon");
+    btn.classList.toggle("clicked");
+}
 
 // Hamburger Menu
 mobileBars.addEventListener("click", () => {
