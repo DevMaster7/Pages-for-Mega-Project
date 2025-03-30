@@ -480,12 +480,44 @@ main {
     font-weight: 700;
     margin-top: 20px;
     text-align: center;
+    display: ruby;
 }
 
-.heading-text span {
+.heading-text div {
+    width: 200px;
+}
+
+.heading-text div span {
     color: var(--Accent);
+    white-space: nowrap;
     font-size: xx-large;
     font-weight: 800;
+    overflow: hidden;
+    letter-spacing: 2px;
+    display: flex;
+    width: 100%;
+    border-right: 3px solid var(--Accent);
+    animation: typing 6s ease-in infinite alternate, blink .9s infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 .other-text {
@@ -654,6 +686,24 @@ main {
     height: 100px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+}
+
+/* #fileInput textarea{
+    display: none;
+} */
 
 .faq-heading {
     font-size: 22px;

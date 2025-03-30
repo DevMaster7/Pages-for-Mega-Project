@@ -9,7 +9,7 @@ let landBars = document.querySelectorAll(".bars-cross-land")[0]
 let landCross = document.querySelectorAll(".bars-cross-land")[1]
 let landDrop = document.querySelector(".useless-dropdown-land")
 let landDropCon = document.querySelector(".dropdown-con-land")
-let faq_btn = document.querySelectorAll(".faq-topic")        
+let faq_btn = document.querySelectorAll(".faq-topic")
 
 
 // Logo Animation
@@ -56,6 +56,21 @@ landDrop.addEventListener("click", () => {
 landCross.addEventListener("click", () => {
     landDropCon.style.display = "none"
 })
+
+// Logo on TShirts
+document.getElementById("fileInput").addEventListener("change", function () {
+    let file = this.files[0];
+
+    if (file) {
+        let reader = new FileReader();
+        reader.onload = function (e) {
+            let img = document.getElementById("preview");
+            img.src = e.target.result;
+            img.style.display = "block";
+        };
+        reader.readAsDataURL(file);
+    }
+});
 
 // FAQs Opener and Closer
 faq_btn.forEach(e => {
