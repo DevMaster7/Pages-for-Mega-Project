@@ -9,7 +9,10 @@ let landBars = document.querySelectorAll(".bars-cross-land")[0]
 let landCross = document.querySelectorAll(".bars-cross-land")[1]
 let landDrop = document.querySelector(".useless-dropdown-land")
 let landDropCon = document.querySelector(".dropdown-con-land")
+let customizePic = document.querySelector(".preview-pic")
+let colorBoxes = document.querySelectorAll(".color-box")
 let faq_btn = document.querySelectorAll(".faq-topic")
+let down = document.querySelectorAll(".extender")
 
 
 // Logo Animation
@@ -57,9 +60,7 @@ landCross.addEventListener("click", () => {
     landDropCon.style.display = "none"
 })
 
-let customizePic = document.querySelector(".preview-pic")
-let colorBoxes = document.querySelectorAll(".color-box")
-// console.log(colorBoxes)
+// Change Colors of Products
 colorBoxes.forEach(e => {
     e.addEventListener("click", () => {
         colorBoxes.forEach(box => box.innerHTML = "");
@@ -101,8 +102,6 @@ colorBoxes.forEach(e => {
     });
 });
 
-// console.log(colorBoxes)
-
 // Logo on TShirts
 document.getElementById("fileInput").addEventListener("change", function () {
     let file = this.files[0];
@@ -120,7 +119,6 @@ document.getElementById("fileInput").addEventListener("change", function () {
 // FAQs Opener and Closer
 faq_btn.forEach(e => {
     e.addEventListener("click", () => {
-        let down = document.querySelectorAll(".extender")
         let currentFaq = e.nextElementSibling;
         let i = e.lastElementChild
         document.querySelectorAll(".extender-con").forEach(faq => {
