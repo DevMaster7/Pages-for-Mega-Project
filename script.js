@@ -57,10 +57,55 @@ landCross.addEventListener("click", () => {
     landDropCon.style.display = "none"
 })
 
+let customizePic = document.querySelector(".preview-pic")
+let colorBoxes = document.querySelectorAll(".color-box")
+// console.log(colorBoxes)
+colorBoxes.forEach(e => {
+    e.addEventListener("click", () => {
+        colorBoxes.forEach(box => box.innerHTML = "");
+        let whiteClass = e.classList.contains("white");
+        let blackClass = e.classList.contains("black");
+        let redClass = e.classList.contains("red");
+        let blueClass = e.classList.contains("blue");
+        let orangeClass = e.classList.contains("orange");
+        let greenClass = e.classList.contains("green");
+        let tick = '<i class="fa-solid fa-check"></i>';
+        
+        if (whiteClass) {
+            customizePic.src = "assets/customizabale/MenTshirtWhite.png";
+            e.innerHTML = tick;
+        }
+        else if (blackClass) {
+            customizePic.src = "assets/customizabale/MenTshirtBlack.png";
+            e.innerHTML = tick;
+        }
+        else if (redClass) {
+            customizePic.src = "assets/customizabale/MenTshirtRed.png";
+            e.innerHTML = tick;
+        }
+        else if (blueClass) {
+            customizePic.src = "assets/customizabale/MenTshirtBlue.png";
+            e.innerHTML = tick;
+        }
+        else if (orangeClass) {
+            customizePic.src = "assets/customizabale/MenTshirtOrange.png";
+            e.innerHTML = tick;
+        }
+        else if (greenClass) {
+            customizePic.src = "assets/customizabale/MenTshirtGreen.png";
+            e.innerHTML = tick;
+        }
+        else {
+            console.log(`GG`);
+        }
+    });
+});
+
+// console.log(colorBoxes)
+
 // Logo on TShirts
 document.getElementById("fileInput").addEventListener("change", function () {
     let file = this.files[0];
-
     if (file) {
         let reader = new FileReader();
         reader.onload = function (e) {

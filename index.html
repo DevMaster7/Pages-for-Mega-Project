@@ -23,7 +23,7 @@
             <div class="useless-dropdown-mobile"></div>
         </div>
         <div class="nav-links">
-            <a href="#">FAQ's</a>
+            <a href="#Faqs">FAQ's</a>
             <a href="#" style="margin-left: 10px;">Shop</a>
         </div>
         <div class="logo-con">
@@ -70,7 +70,7 @@
     <main>
         <section class="landing-page">
             <div class="landing-left">
-                <img src="mann.jpg" alt="">
+                <img src="assets/man.jpg" alt="">
             </div>
             <div class="landing-center">
                 <div class="heading-text">
@@ -89,7 +89,7 @@
             </div>
             <div class="landing-right">
                 <div class="right-con">
-                    <img class="imgg" style="grid-area: box1;" src="undraw_location-tracking_q3yd.png" alt="">
+                    <img class="imgg" style="grid-area: box1;" src="assets/undraw_location-tracking_q3yd.png" alt="">
                     <div class="social-links" style="grid-area: box3;">
                         <a class="circle twi" href="#">
                             <i class="fa-brands fa-twitter"></i>
@@ -104,8 +104,8 @@
                             <i class="fa-brands fa-youtube"></i>
                         </a>
                     </div>
-                    <img class="imgg" style="grid-area: box4;" src="undraw_online-shopping_hgf6 (1).png" alt="">
-                    <img class="imgg" style="grid-area: box5;" src="undraw_ship-it_vn4g.png" alt="">
+                    <img class="imgg" style="grid-area: box4;" src="assets/undraw_online-shopping_hgf6 (1).png" alt="">
+                    <img class="imgg" style="grid-area: box5;" src="assets/undraw_ship-it_vn4g.png" alt="">
                 </div>
             </div>
         </section>
@@ -113,15 +113,37 @@
 
     <div class="content-page">
         <div class="customize-con">
-            <div class="cust-left">You Can Buy Any Product as Well Customize With Your Own Choice</div>
+            <div class="cust-left">
+                <div>
+                    <span>Customize With Your Style - No Limits!</span>
+                    <div>Your Things Your Canvas! Choose From a Variety Of Colors, Add Your Custom Logos And Create a
+                        Look That's Uniquely Defined You. Express Your Personality With Your Design.</div>
+                </div>
+            </div>
             <div class="cust-right">
-                <img src="assets/customizabale/MenTshirtWhite.png" alt="">
-                <label for="fileInput" class="custom-file-upload">Choose Image</label>
-                <input type="file" id="fileInput" accept="image/*" hidden>
-                <img id="preview" style="display:none; width:200px; height:auto;">
+                <div class="right">
+                    <img class="preview-pic" src="assets/customizabale/MenTshirtWhite.png" alt="">
+                    <div class="img-selection">
+                        <div class="img-box"><img src="assets/customizabale/MenTshirtWhite.png" alt=""></div>
+                        <div class="img-box"><img src="assets/customizabale/FemaleTshirtWhite.png" alt=""></div>
+                        <div class="img-box"><img src="assets/customizabale/MugWhite.png" alt=""></div>
+                        <div class="img-box"><img src="assets/customizabale/Perfume.png" alt=""></div>
+                    </div>
+                    <div class="color-selection">
+                        <div class="color-box white" style="background-color: hsl(0, 0%, 100%);"><i
+                                class="fa-solid fa-check"></i></div>
+                        <div class="color-box black" style="background-color: hsl(0, 2%, 24%);"></div>
+                        <div class="color-box red" style="background-color: hsl(358, 75%, 56%);"></div>
+                        <div class="color-box blue" style="background-color: hsl(216, 58%, 65%);"></div>
+                        <div class="color-box orange" style="background-color: hsl(28, 87%, 57%);"></div>
+                        <div class="color-box green" style="background-color: hsl(75, 62%, 67%);"></div>
+                    </div>
+                    <label for="fileInput" class="custom-file-upload">Your Logo</label>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
             </div>
         </div>
-        <div class="faqs-con">
+        <div id="Faqs" class="faqs-con">
             <div class="faq-heading">FAQs About:</div>
             <div class="faq">
                 <div class="faq-topic">
@@ -251,7 +273,7 @@
             </div>
         </div>
         <div class="copytext">
-            &copy; 2025 E Bazaar - All Rights Reserved
+            &copy; 2025 QuickCart - All Rights Reserved
         </div>
     </footer>
     <script src="script.js"></script>
