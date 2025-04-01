@@ -10,6 +10,7 @@ let landCross = document.querySelectorAll(".bars-cross-land")[1]
 let landDrop = document.querySelector(".useless-dropdown-land")
 let landDropCon = document.querySelector(".dropdown-con-land")
 let customizePic = document.querySelector(".preview-pic")
+let picBoxes = document.querySelectorAll(".img-box")
 let colorBoxes = document.querySelectorAll(".color-box")
 let faq_btn = document.querySelectorAll(".faq-topic")
 let down = document.querySelectorAll(".extender")
@@ -60,45 +61,47 @@ landCross.addEventListener("click", () => {
     landDropCon.style.display = "none"
 })
 
-// Change Colors of Products
-colorBoxes.forEach(e => {
+// Change Products
+picBoxes.forEach((e) => {
     e.addEventListener("click", () => {
-        colorBoxes.forEach(box => box.innerHTML = "");
-        let whiteClass = e.classList.contains("white");
-        let blackClass = e.classList.contains("black");
-        let redClass = e.classList.contains("red");
-        let blueClass = e.classList.contains("blue");
-        let orangeClass = e.classList.contains("orange");
-        let greenClass = e.classList.contains("green");
-        let tick = '<i class="fa-solid fa-check"></i>';
-        
-        if (whiteClass) {
-            customizePic.src = "assets/customizabale/MenTshirtWhite.png";
-            e.innerHTML = tick;
+        picBoxes.forEach((x) => {
+            x.style.boxShadow = "0px 0px 2px #000000cf";
+        });
+        e.style.boxShadow = "#000000d9 3px 3px 5px";
+
+        let imgWithsrc = e.innerHTML;
+        let result = imgWithsrc.split('src="')[1].split('"')[0];
+        customizePic.src = result;
+
+        colorBoxes.forEach((y) => {
+            y.style.boxShadow = "unset";
+        });
+
+        let whiteBox = document.querySelector(".color-box.white");
+        if (whiteBox) {
+            whiteBox.style.boxShadow = "2px 2px 2px #000000d9";
         }
-        else if (blackClass) {
-            customizePic.src = "assets/customizabale/MenTshirtBlack.png";
-            e.innerHTML = tick;
-        }
-        else if (redClass) {
-            customizePic.src = "assets/customizabale/MenTshirtRed.png";
-            e.innerHTML = tick;
-        }
-        else if (blueClass) {
-            customizePic.src = "assets/customizabale/MenTshirtBlue.png";
-            e.innerHTML = tick;
-        }
-        else if (orangeClass) {
-            customizePic.src = "assets/customizabale/MenTshirtOrange.png";
-            e.innerHTML = tick;
-        }
-        else if (greenClass) {
-            customizePic.src = "assets/customizabale/MenTshirtGreen.png";
-            e.innerHTML = tick;
-        }
-        else {
-            console.log(`GG`);
-        }
+    });
+});
+
+// Change Colors of Products
+colorBoxes.forEach((element) => {
+    element.addEventListener("click", () => {
+        let whiteClass = element.classList.contains("white");
+        let blackClass = element.classList.contains("black");
+        let redClass = element.classList.contains("red");
+        let blueClass = element.classList.contains("blue");
+        let orangeClass = element.classList.contains("orange");
+        let greenClass = element.classList.contains("green");
+        let firstpreview = document.querySelector(".preview-pic");
+        // TODO: Change Split when Website post on URL
+        let imgSRC = firstpreview.src.split("customizabale/")[1];
+        console.log(whiteClass, blackClass, redClass, blueClass, orangeClass, greenClass);
+        console.log(imgSRC);
+        colorBoxes.forEach((y) => {
+            y.style.boxShadow = "unset";
+        });
+        element.style.boxShadow = "2px 2px 2px #000000d9";
     });
 });
 
