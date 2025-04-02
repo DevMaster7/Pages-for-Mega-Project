@@ -682,6 +682,7 @@ main {
     height: 30px !important;
     top: 50px;
     left: 60px;
+    -webkit-user-drag: none;
 }
 
 .product-logo2 {
@@ -690,11 +691,13 @@ main {
     height: 30px !important;
     top: 85px;
     right: 70px;
+    -webkit-user-drag: none;
 }
 
 .preview-pic img {
     width: 100%;
     height: 100%;
+    -webkit-user-drag: none;
 }
 
 .img-selection {
@@ -719,13 +722,13 @@ main {
     box-shadow: 0px 0px 2px #000000cf;
     position: relative;
     user-select: none;
-    -webkit-user-drag: none;
 }
 
 .img-box img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
+    -webkit-user-drag: none;
 }
 
 .color-selection {
