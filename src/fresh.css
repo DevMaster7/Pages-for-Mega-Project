@@ -921,6 +921,10 @@ footer {
         grid-area: box5;
     }
 
+    .cust-right{
+        padding: 0px 15px !important;
+    }
+
     .faqs-con {
         padding: 10px 100px;
     }
@@ -977,13 +981,13 @@ footer {
     }
 
     .cust-left {
-        padding: 0;
+        padding: 0 !important;
         width: unset;
         height: unset;
     }
 
     .cust-right {
-        padding: 0;
+        padding: 0 !important;
         width: unset;
     }
 
@@ -1190,7 +1194,7 @@ footer {
     }
 
     .cust-right .right {
-        padding: 0px 40px !important;
+        padding: 0px 20px !important;
     }
 
     .faqs-con {
@@ -1227,6 +1231,18 @@ footer {
     }
 
     .cust-right .right {
-        padding: 0px 10px !important;
+        padding: 0px 5px !important;
+    }
+
+    .btns{
+        gap: 40px;
+    }
+
+    .position-size{
+        gap: 6px !important;
+    }
+
+    .color-selection{
+        gap: 15px !important;
     }
 }
