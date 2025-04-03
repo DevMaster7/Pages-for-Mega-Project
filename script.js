@@ -9,7 +9,13 @@ let landBars = document.querySelectorAll(".bars-cross-land")[0]
 let landCross = document.querySelectorAll(".bars-cross-land")[1]
 let landDrop = document.querySelector(".useless-dropdown-land")
 let landDropCon = document.querySelector(".dropdown-con-land")
-let customizePic = document.querySelector(".preview-pic").getElementsByTagName("img")[1] // Change When extra Images add in CustomizePic 
+// Change When extra Images add in CustomizePic 
+let customizeRight = document.querySelector(".cust-right")
+let customizeBox = customizeRight.querySelector(".right")
+let customizePic = document.querySelector(".preview-pic").getElementsByTagName("img")[1]
+let positionSize = document.querySelector(".position-size")
+let imgSelection = document.querySelector(".img-selection")
+let colorSelection = document.querySelector(".color-selection")
 let picBoxes = document.querySelectorAll(".img-box")
 let colorBoxes = document.querySelectorAll(".color-box")
 let faq_btn = document.querySelectorAll(".faq-topic")
@@ -63,6 +69,14 @@ landCross.addEventListener("click", () => {
 // Change Products
 picBoxes.forEach((e) => {
     e.addEventListener("click", () => {
+
+        customizeRight.style.padding = "0px 0px 0px 50px"
+        customizeBox.style.height = "400px"
+        positionSize.style.display = "none"
+        imgSelection.style.width = "unset"
+        imgSelection.style.justifyContent = "center"
+        colorSelection.style.gap = "10px"
+
         picBoxes.forEach((x) => {
             x.style.boxShadow = "0px 0px 2px #000000cf";
         });
@@ -114,16 +128,25 @@ colorBoxes.forEach((element) => {
 
 // Logo on TShirts
 document.getElementById("fileInput").addEventListener("change", function () {
-    let file = this.files[0];
-    if (file) {
-        let reader = new FileReader();
-        reader.onload = function (e) {
-            let img = document.getElementById("preview");
-            img.src = e.target.result;
-            img.style.display = "block";
-        };
-        reader.readAsDataURL(file);
-    }
+
+    customizeRight.style.padding = "0px 50px"
+    customizeBox.style.height = "420px"
+    positionSize.style.display = "flex"
+    imgSelection.style.width = "100%"
+    imgSelection.style.justifyContent = "space-evenly"
+    colorSelection.style.gap = "20px"
+
+    // ImgSelection.style.display = "none"
+    // let file = this.files[0];
+    // if (file) {
+    //     let reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         let img = document.getElementById("preview");
+    //         img.src = e.target.result;
+    //         img.style.display = "block";
+    //     };
+    //     reader.readAsDataURL(file);
+    // }
 });
 
 // FAQs Opener and Closer
