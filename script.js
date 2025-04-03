@@ -69,7 +69,7 @@ landCross.addEventListener("click", () => {
 // Change Products
 picBoxes.forEach((e) => {
     e.addEventListener("click", () => {
-        customizeRight.style.padding = "0px 0px 0px 50px"
+        customizeRight.style.padding = " 0px 50px"
         customizeBox.style.height = "400px"
         positionSize.style.display = "none"
         imgSelection.style.width = "unset"
@@ -80,11 +80,11 @@ picBoxes.forEach((e) => {
             x.style.boxShadow = "0px 0px 2px #000000cf";
         });
         e.style.boxShadow = "#000000d9 3px 3px 5px";
-
+        
         let imgSRC1 = e.innerHTML;
         let SRC1 = imgSRC1.split('src="')[1].split('"')[0];
         customizePic.src = SRC1;
-
+        
         let SRC2 = SRC1.split("customizabale/")[1];
         if (SRC2.includes("MenTshirt") || SRC2.includes("Perfume")) {
             customizePic.style.height = "100%";
@@ -95,7 +95,7 @@ picBoxes.forEach((e) => {
         else if (SRC2.includes("Mug")) {
             customizePic.style.height = "85%";
         }
-
+        
         let whiteBox = document.querySelector(".color-box.white");
         colorBoxes.forEach((y) => {
             y.style.boxShadow = "unset";
@@ -111,7 +111,7 @@ colorBoxes.forEach((element) => {
     element.addEventListener("click", () => {
         let classText = element.className.slice(10)
         let imgSRC2 = customizePic.src;
-
+        
         let startIndex = imgSRC2.indexOf("assets");
         let result = imgSRC2.substring(startIndex).substring(0, 30);
         let mainSRC = `${result}${classText}.png`
@@ -126,7 +126,7 @@ colorBoxes.forEach((element) => {
 
 // Logo on TShirts
 document.getElementById("fileInput").addEventListener("change", function () {
-    customizeRight.style.padding = "0px 50px"
+    customizeRight.style.padding = "0px 25px"
     customizeBox.style.height = "420px"
     positionSize.style.display = "flex"
     imgSelection.style.width = "100%"

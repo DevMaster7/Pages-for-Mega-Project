@@ -621,10 +621,9 @@ main {
 }
 
 .cust-left {
-    height: 350px;
     width: 75%;
     display: flex;
-    padding: 0px 0px 0px 55px;
+    padding: 0px 0px 0px 35px;
 }
 
 .cust-left div {
@@ -650,10 +649,9 @@ main {
 
 .cust-right {
     height: 100%;
-    width: 40%;
     display: flex;
     align-items: center;
-    padding: 0px 0px 0px 50px;
+    padding: 0px 50px;
 }
 
 .cust-right .right {
@@ -662,7 +660,7 @@ main {
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    padding: 0px 30px;
+    padding: 0px 25px;
     height: 400px;
     box-shadow: 0px 0px 5px #00000082;
 }
@@ -672,14 +670,12 @@ main {
     height: 215px;
     display: flex;
     justify-content: center;
-    align-items: cente  r;
+    align-items: center;
     position: relative;
 }
 
 .product-logo {
     position: absolute;
-    /* width: 30px !important;
-    height: 30px !important; */
     top: 50px;
     left: 60px;
     user-select: none;
@@ -699,7 +695,7 @@ main {
     gap: 10px;
 }
 
-.position-size div{
+.position-size div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -715,7 +711,7 @@ main {
     border-radius: 5px;
 }
 
-.position-size input::placeholder{
+.position-size input::placeholder {
     color: rgb(29, 29, 29);
 }
 
@@ -914,7 +910,7 @@ footer {
         grid-area: box5;
     }
 
-    .cust-right{
+    .cust-left {
         padding: 0px 15px !important;
     }
 
@@ -969,21 +965,16 @@ footer {
 
     .customize-con {
         flex-direction: column;
-        padding: 20px 10px;
         gap: 30px;
     }
 
     .cust-left {
-        padding: 0 !important;
         width: unset;
-        height: unset;
     }
 
     .cust-right {
         padding: 0 !important;
-        width: unset;
     }
-
 }
 
 @media (max-width: 690px) {
@@ -1186,8 +1177,18 @@ footer {
         font-size: 21px;
     }
 
+    .cust-left {
+        width: unset;
+        padding: 0px 10px;
+    }
+
+    .position-size input{
+        width: unset;
+        height: unset;
+    }
+
     .cust-right .right {
-        padding: 0px 20px !important;
+        padding: 0px 10px;
     }
 
     .faqs-con {
@@ -1223,19 +1224,15 @@ footer {
         display: flex !important;
     }
 
-    .cust-right .right {
-        padding: 0px 5px !important;
-    }
-
-    .btns{
+    .btns {
         gap: 40px;
     }
 
     .position-size{
-        gap: 2px !important;
+        gap: 2px;
     }
 
     .color-selection{
-        gap: 15px !important;
-    }
+        gap: 10px !important;
+    } 
 }
