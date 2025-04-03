@@ -69,7 +69,6 @@ landCross.addEventListener("click", () => {
 // Change Products
 picBoxes.forEach((e) => {
     e.addEventListener("click", () => {
-
         customizeRight.style.padding = "0px 0px 0px 50px"
         customizeBox.style.height = "400px"
         positionSize.style.display = "none"
@@ -115,7 +114,6 @@ colorBoxes.forEach((element) => {
 
         let startIndex = imgSRC2.indexOf("assets");
         let result = imgSRC2.substring(startIndex).substring(0, 30);
-
         let mainSRC = `${result}${classText}.png`
         customizePic.src = mainSRC;
 
@@ -128,7 +126,6 @@ colorBoxes.forEach((element) => {
 
 // Logo on TShirts
 document.getElementById("fileInput").addEventListener("change", function () {
-
     customizeRight.style.padding = "0px 50px"
     customizeBox.style.height = "420px"
     positionSize.style.display = "flex"
@@ -136,17 +133,52 @@ document.getElementById("fileInput").addEventListener("change", function () {
     imgSelection.style.justifyContent = "space-evenly"
     colorSelection.style.gap = "20px"
 
-    // ImgSelection.style.display = "none"
-    // let file = this.files[0];
-    // if (file) {
-    //     let reader = new FileReader();
-    //     reader.onload = function (e) {
-    //         let img = document.getElementById("preview");
-    //         img.src = e.target.result;
-    //         img.style.display = "block";
-    //     };
-    //     reader.readAsDataURL(file);
-    // }
+    let file = this.files[0];
+    if (file) {
+        let imgLogo = document.querySelector(".product-logo");
+        let reader = new FileReader();
+        reader.onload = function (e) {
+            imgLogo.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+
+        let widthLogo = document.getElementById("logo-W")
+        let heightLogo = document.getElementById("logo-H")
+        let xaxisLogo = document.getElementById("logo-X")
+        let yaxisLogo = document.getElementById("logo-Y")
+        widthLogo.addEventListener("input", function () {
+            if (widthLogo.value > 100) {
+                imgLogo.style.width = `${100}px`
+            }
+            else {
+                imgLogo.style.width = `${widthLogo.value}px`
+            }
+        })
+        heightLogo.addEventListener("input", function () {
+            if (heightLogo.value > 100) {
+                imgLogo.style.height = `${100}px`
+            }
+            else {
+                imgLogo.style.height = `${heightLogo.value}px`
+            }
+        })
+        xaxisLogo.addEventListener("input", function () {
+            if (xaxisLogo.value > 100) {
+                imgLogo.style.left = `${100}px`
+            }
+            else {
+                imgLogo.style.left = `${xaxisLogo.value}px`
+            }
+        })
+        yaxisLogo.addEventListener("input", function () {
+            if (yaxisLogo.value > 100) {
+                imgLogo.style.top = `${100}px`
+            }
+            else {
+                imgLogo.style.top = `${yaxisLogo.value}px`
+            }
+        })
+    }
 });
 
 // FAQs Opener and Closer

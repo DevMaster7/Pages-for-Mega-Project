@@ -672,26 +672,16 @@ main {
     height: 215px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: cente  r;
     position: relative;
 }
 
-.product-logo1 {
+.product-logo {
     position: absolute;
-    width: 30px !important;
-    height: 30px !important;
+    /* width: 30px !important;
+    height: 30px !important; */
     top: 50px;
     left: 60px;
-    user-select: none;
-    -webkit-user-drag: none;
-}
-
-.product-logo2 {
-    position: absolute;
-    width: 30px !important;
-    height: 30px !important;
-    top: 85px;
-    right: 70px;
     user-select: none;
     -webkit-user-drag: none;
 }
@@ -699,6 +689,7 @@ main {
 .preview-pic img {
     width: 100%;
     height: 100%;
+    border-radius: 5px;
     user-select: none;
     -webkit-user-drag: none;
 }
@@ -717,6 +708,8 @@ main {
 
 .position-size input {
     text-align: center;
+    width: 75px;
+    height: 25px;
     outline: none;
     border: 1px solid;
     border-radius: 5px;
