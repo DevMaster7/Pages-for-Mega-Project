@@ -9,7 +9,6 @@ let landBars = document.querySelectorAll(".bars-cross-land")[0]
 let landCross = document.querySelectorAll(".bars-cross-land")[1]
 let landDrop = document.querySelector(".useless-dropdown-land")
 let landDropCon = document.querySelector(".dropdown-con-land")
-// Change When extra Images add in CustomizePic 
 let customizeRight = document.querySelector(".cust-right")
 let customizeBox = customizeRight.querySelector(".right")
 let customizePic = document.querySelector(".preview-pic").getElementsByTagName("img")[1]
@@ -22,7 +21,7 @@ let carousel = document.getElementById("carousel");
 let dotsContainer = document.getElementById("dots");
 let faq_btn = document.querySelectorAll(".faq-topic")
 let down = document.querySelectorAll(".extender")
-// console.log(revCards)
+
 // Logo Animation
 icon.addEventListener("animationend", function () {
     icon.style.animation = "bounce .5s ease-in-out 2";
