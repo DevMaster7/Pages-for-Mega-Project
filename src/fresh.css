@@ -617,7 +617,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0px;
+    padding: 25px 0px;
+    border-bottom: 2px solid var(--Primary);
 }
 
 .cust-left {
@@ -676,8 +677,6 @@ main {
 
 .product-logo {
     position: absolute;
-    top: 50px;
-    left: 60px;
     user-select: none;
     -webkit-user-drag: none;
 }
@@ -788,6 +787,185 @@ main {
     background-position: center;
 }
 
+.review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-heading {
+    text-align: center;
+    color: var(--Accent);
+    font-weight: 800;
+    font-size: 31px;
+    cursor: default;
+    margin-top: 30px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    padding: 40px 0;
+}
+
+.card {
+    flex: 0 0 33.3333%;
+    margin: 0;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px 15px 40px;
+    font-size: 1.2rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    opacity: 0.6;
+    transform: scale(0.9);
+    cursor: pointer;
+    color: #04161f;
+}
+
+.card.center {
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 12px 13px rgba(0, 0, 0, 0.2);
+}
+
+.cir {
+    width: 0;
+    height: 0;
+}
+
+.card.center h4 {
+    transition: all .2s linear;
+    color: var(--Accent);
+    width: 100%;
+    text-align: left;
+    text-decoration: underline solid var(--Accent);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #cfcfcfd8;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    user-select: none;
+}
+
+.arrow:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.left-arrow {
+    left: -40px;
+}
+
+.right-arrow {
+    right: -40px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333;
+    transform: scale(1.5);
+}
+
+.dot.small {
+    transform: scale(0.7);
+}
+
+/* .card {
+    width: 180px;
+    height: 250px;
+    background: #f0f0f0;
+    border-radius: 15px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+    flex-shrink: 0;
+    box-shadow: inset 0px 0px 5px #000000b3;
+}
+
+.card p {
+    transition: all 0.5s ease-in-out;
+    font-size: large;
+    color: #031f2d;
+}
+
+.card h4 {
+    margin-top: 10px;
+    text-decoration: underline solid var(--Accent);
+    color: var(--Accent);
+}
+
+.card.active {
+    transform: scale(1.2);
+    background: #f0f0f0;
+    z-index: 2;
+}
+
+.active p {
+    font-size: 17px;
+    font-weight: 600;
+    color: #031f2d;
+    padding-top: 12px;
+    margin-top: 7px;
+    border-top: 1px solid #000000e8;
+}
+
+.active .cir {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background: #868686;
+}
+
+.cir {
+    transition: all 0.5s ease-in-out;
+    width: 0;
+    height: 0;
+} */
+
 .faq-heading {
     font-size: 22px;
     font-weight: 800;
@@ -882,6 +1060,17 @@ footer {
 
 /* TODO: Responsivness Of Website */
 
+/* Height Responsive */
+@media (max-height: 400px) {
+    /* body {
+        background: #ffa32b;
+    } */
+
+    main {
+        height: unset;
+        padding-bottom: 25px;
+    }
+}
 
 /* Tablet devices */
 @media (min-width: 481px) and (max-width: 1024px) {
@@ -1182,7 +1371,7 @@ footer {
         padding: 0px 10px;
     }
 
-    .position-size input{
+    .position-size input {
         width: unset;
         height: unset;
     }
@@ -1228,11 +1417,11 @@ footer {
         gap: 40px;
     }
 
-    .position-size{
+    .position-size {
         gap: 2px;
     }
 
-    .color-selection{
+    .color-selection {
         gap: 10px !important;
-    } 
+    }
 }
