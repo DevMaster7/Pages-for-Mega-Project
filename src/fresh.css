@@ -574,7 +574,7 @@ main {
 .imgg {
     width: 130px;
     border-radius: 12px;
-    box-shadow: 3px 1px 10px rgb(0, 0, 0);
+    box-shadow: 3px 1px 10px rgb(0 0 0 / 44%);
     cursor: pointer;
     user-select: none;
     -webkit-user-drag: none;
