@@ -294,3 +294,4 @@ cardsPerView = getCardsPerView();
 updateSlider();
 addClickListeners();
 startAutoScroll();
+

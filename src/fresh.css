@@ -26,6 +26,24 @@ main {
     border-bottom: 2px solid var(--Primary);
 }
 
+.content-page div{
+    animation: appear linear;
+    animation-timeline: view();
+    
+    animation-range: entry -20% cover 20%;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
 .nav-container {
     display: flex;
     justify-content: center;
@@ -557,6 +575,7 @@ main {
     width: 130px;
     border-radius: 12px;
     box-shadow: 3px 1px 10px rgb(0, 0, 0);
+    cursor: pointer;
     user-select: none;
     -webkit-user-drag: none;
 }
@@ -590,7 +609,7 @@ main {
 }
 
 .twi:hover i {
-    color: #1DA1F2;
+    color: #020202;
 }
 
 .face:hover i {
@@ -792,6 +811,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    border-bottom: 2px solid var(--Primary);
 }
 
 .review-heading {
@@ -892,7 +913,7 @@ main {
     display: flex;
     justify-content: center;
     gap: 8px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .dot {
@@ -913,59 +934,6 @@ main {
     transform: scale(0.7);
 }
 
-/* .card {
-    width: 180px;
-    height: 250px;
-    background: #f0f0f0;
-    border-radius: 15px;
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
-    transition: all 0.5s ease-in-out;
-    flex-shrink: 0;
-    box-shadow: inset 0px 0px 5px #000000b3;
-}
-
-.card p {
-    transition: all 0.5s ease-in-out;
-    font-size: large;
-    color: #031f2d;
-}
-
-.card h4 {
-    margin-top: 10px;
-    text-decoration: underline solid var(--Accent);
-    color: var(--Accent);
-}
-
-.card.active {
-    transform: scale(1.2);
-    background: #f0f0f0;
-    z-index: 2;
-}
-
-.active p {
-    font-size: 17px;
-    font-weight: 600;
-    color: #031f2d;
-    padding-top: 12px;
-    margin-top: 7px;
-    border-top: 1px solid #000000e8;
-}
-
-.active .cir {
-    width: 30px;
-    height: 30px;
-    border-radius: 50px;
-    background: #868686;
-}
-
-.cir {
-    transition: all 0.5s ease-in-out;
-    width: 0;
-    height: 0;
-} */
-
 .faq-heading {
     font-size: 22px;
     font-weight: 800;
@@ -981,7 +949,6 @@ main {
     gap: 15px;
     padding: 25px 170px;
     scroll-margin-top: 60px;
-    border-top: 2px solid var(--Primary);
 }
 
 .faq {
@@ -1164,6 +1131,14 @@ footer {
     .cust-right {
         padding: 0 !important;
     }
+
+    .review{
+        width: 97%;
+    }
+
+    .card{
+        flex: 0 0 33.5%;
+    }
 }
 
 @media (max-width: 690px) {
@@ -1240,6 +1215,17 @@ footer {
         margin-top: 25px;
     }
 
+    .card {
+        flex: 0 0 52.5%;
+        transform: scale(0.8);
+    }
+
+    .card.center{
+        transform: scale(1);
+        position: relative;
+        left: 32px;
+    }
+
     .faqs-con {
         padding: 10px 20px;
     }
@@ -1285,6 +1271,22 @@ footer {
     .cust-left div div {
         font-size: 25px;
         line-height: unset;
+    }
+
+    .review{
+        width: 90%;
+    }
+
+    .review-heading{
+        font-size: 30px;
+    }
+
+    .card{
+        flex: 0 0 51.4%;
+    }
+
+    .card.center{
+        left: 20px;
     }
 }
 
@@ -1380,6 +1382,24 @@ footer {
         padding: 0px 10px;
     }
 
+    .review{
+        width: 81%;
+    }
+
+    .review-heading{
+        font-weight: 700;
+        font-size: 28px;
+    }
+
+    .card{
+        flex: 0 0 98.4%;
+    }
+
+    .card.center {
+        left: 3px;
+        box-shadow: inset 0px 0px 5px #000000a3;
+    }
+
     .faqs-con {
         padding: 10px 15px;
     }
@@ -1423,5 +1443,9 @@ footer {
 
     .color-selection {
         gap: 10px !important;
+    }
+
+    .review{
+        width: 75%;
     }
 }
