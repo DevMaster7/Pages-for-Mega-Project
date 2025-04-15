@@ -880,15 +880,6 @@ main {
     position: relative;
 }
 
-.delivery-con .right .gif1 {
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    right: 50px;
-    top: 200px;
-    transform: rotate(349deg);
-}
-
 .delivery-con .right span {
     font-size: 34px;
     font-weight: 800;
