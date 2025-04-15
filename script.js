@@ -12,6 +12,7 @@ let landDropCon = document.querySelector(".dropdown-con-land")
 let customizeRight = document.querySelector(".cust-right")
 let customizeBox = customizeRight.querySelector(".right")
 let customizePic = document.querySelector(".preview-pic").getElementsByTagName("img")[1]
+let imgLogo = document.querySelector(".product-logo");
 let positionSize = document.querySelector(".position-size")
 let imgSelection = document.querySelector(".img-selection")
 let colorSelection = document.querySelector(".color-selection")
@@ -70,6 +71,7 @@ landCross.addEventListener("click", () => {
 // Change Products
 picBoxes.forEach((e) => {
     e.addEventListener("click", () => {
+        imgLogo.style.display = "none"
         customizeRight.style.padding = " 0px 50px"
         customizeBox.style.height = "400px"
         positionSize.style.display = "none"
@@ -133,10 +135,10 @@ document.getElementById("fileInput").addEventListener("change", function () {
     imgSelection.style.width = "100%"
     imgSelection.style.justifyContent = "space-evenly"
     colorSelection.style.gap = "20px"
+    imgLogo.style.display = "flex"
 
     let file = this.files[0];
     if (file) {
-        let imgLogo = document.querySelector(".product-logo");
         let reader = new FileReader();
         reader.onload = function (e) {
             imgLogo.src = e.target.result;
