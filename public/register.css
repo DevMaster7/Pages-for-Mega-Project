@@ -1,0 +1,161 @@
+:root {
+    --Primary: #023047;
+    --Secondary: #219EBC;
+    --Accent: #FB8500;
+    --Highlight: #F8F9FA;
+    --Heading: #CCD6F6;
+}
+
+body,
+html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F9FA;
+    scroll-behavior: smooth;
+}
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--Highlight);
+    overflow: hidden
+}
+
+.left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    padding: 140px 20px 0px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--Primary);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -60px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: rise 12s linear infinite;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-120vh) scale(1.7);
+        opacity: 0;
+    }
+}
+
+.icon {
+    width: 55px;
+    position: absolute;
+    top: 50px;
+}
+
+.tag {
+    transform-origin: top center;
+    animation: dangle 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes dangle {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(20deg);
+    }
+}
+
+.left .heading {
+    color: var(--Accent);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.left .text {
+    color: var(--Highlight);
+    font-size: 16px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: var(--Primary);
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.circle i {
+    color: var(--Highlight);
+    transition: .2s;
+    font-size: 22px;
+}
+
+.circle:hover {
+    background: var(--Highlight);
+    border: 1px solid rgba(119, 119, 119, 0.842);
+}
+
+.twi:hover i {
+    color: #020202;
+}
+
+.face:hover i {
+    color: #0965fd;
+}
+
+.insta:hover i {
+    color: #e4405f;
+}
+
+.you:hover i {
+    color: #ea0000;
+}
+
+.right {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.have-acc{
+    color: var(--Heading);
+    font-size: 17px;
+    text-align: center;
+}
+
+.have-acc a{
+    color: var(--Accent);
+    text-decoration: underline solid var(--Accent);
+}

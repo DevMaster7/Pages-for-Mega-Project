@@ -661,6 +661,13 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.cust-left div span {
+    color: var(--Accent);
+    font-size: 37px;
+    font-weight: 700;
+    text-align: center;
     position: relative;
 }
 
@@ -668,11 +675,20 @@ main {
     width: 60px;
     height: 60px;
     position: absolute;
-    top: -40px;
+    top: -30px;
     right: -20px;
     transform: rotate(18deg);
     user-select: none;
     -webkit-user-drag: none;
+}
+
+.cust-left div div {
+    color: #031f2d;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 45px;
+    text-align: center;
+    position: relative;
 }
 
 .gif2 {
@@ -684,32 +700,6 @@ main {
     transform: rotate(350deg);
     user-select: none;
     -webkit-user-drag: none;
-}
-
-.gif3 {
-    width: 45px;
-    height: 45px;
-    position: absolute;
-    bottom: -5px;
-    left: -15px;
-    transform: rotate(350deg);
-    user-select: none;
-    -webkit-user-drag: none;
-}
-
-.cust-left div span {
-    color: var(--Accent);
-    font-size: 37px;
-    font-weight: 700;
-    text-align: center;
-}
-
-.cust-left div div {
-    color: #031f2d;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 45px;
-    text-align: center;
 }
 
 .cust-right {
@@ -815,6 +805,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    opacity: 1 !important;
 }
 
 .color-selection .color-box:first-child {
@@ -830,6 +821,7 @@ main {
     justify-content: center;
     align-items: center;
     border: 1px solid rgb(66, 66, 66);
+    opacity: 1 !important;
 }
 
 .custom-file-upload {
